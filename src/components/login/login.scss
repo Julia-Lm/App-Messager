@@ -1,0 +1,17 @@
+.login-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-button{
+    padding: 20px;
+    background-color: #8080807d;
+
+    button{
+        margin-top: 0;
+        cursor: pointer;
+    }
+    button:hover{
+    background-color: #80808060;
+}
+}

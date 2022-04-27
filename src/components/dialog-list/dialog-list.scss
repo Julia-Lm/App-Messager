@@ -1,0 +1,67 @@
+@import '../../style/mixins.scss';
+
+.list-item{
+    border-bottom: 1px solid grey;
+    display: flex;
+    padding: 10px 5px;
+
+    .contact-img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .contact-info{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        align-self: center;
+        padding-right: 5px;
+
+        .contact-name{
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .contact-last-message{
+            margin-top: 2px;
+            color: gray;
+            font-size: 12px;
+        }
+    }
+    .contact-time{
+        font-size: 10px;
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .contact-time-message{
+        color: gray;
+
+        @include _540-767{
+            text-align: end;
+        }
+        }
+        .contact-counter-message{
+            display: none;
+        }
+        .counter-message{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0000ff73;
+            border: 1px solid blue;
+            border-radius: 50%;
+            min-width: 15px;
+            min-height: 15px;
+            padding: 2px;
+            color: #fff;
+        }
+
+    }
+    
+}

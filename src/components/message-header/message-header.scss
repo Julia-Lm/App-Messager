@@ -1,0 +1,21 @@
+@import '../../style/mixins.scss';
+
+.back-icon{
+    display: none;
+
+    @include _mobile{
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 10px;
+    }
+}
+.user-icon{
+    margin-right: 5px;
+}
+.user-name{
+    font-weight: 600;
+}

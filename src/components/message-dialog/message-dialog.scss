@@ -1,0 +1,78 @@
+@import '../../style/mixins.scss';
+
+.dialog-message-content{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+
+    .content-icon{
+        margin-right: 10px;
+    }
+
+    .content-info{
+
+        .content-info-text{
+            max-width: 500px;
+            padding: 8px 8px;
+
+            @include _768-900{
+                max-width: 350px;
+            }
+            @include _540-767{
+                max-width: 250px;
+            }
+            @include _mobile{
+                max-width: 270px;
+            }
+        }
+        
+        .user-text{
+            border-radius: 10px 10px 0 10px;
+            background-color: rgb(214, 209, 209);
+        }
+        .contact-text{
+            border-radius: 10px 10px 10px 0;
+            background-color: rgb(171, 166, 166);
+        }
+
+        .user-data{
+            text-align: end;
+            padding: 5px;
+            font-size: 10px;
+        }
+        .contact-data{
+            text-align: start;
+            padding: 5px;
+            font-size: 12px;
+        }   
+    }
+}
+.user-content{
+    margin-left: auto;
+
+    .user-icon{
+        display: none;
+    }
+}
+.contact-content{
+
+    .contact-icon{
+        display: block;
+    }
+}
+
+.dialog-message-absent{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .absent-img{
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
