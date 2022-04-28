@@ -13,16 +13,16 @@ const AppMain = (props) => {
 
     if (user) {
         return (
-            <>
+            <React.Fragment>
                 <Chat />
-            </>
+            </React.Fragment>
 
         )
     } else {
         return (
-            <>
+            <React.Fragment>
                 <Login />
-            </>
+            </React.Fragment>
         )
     }
 }

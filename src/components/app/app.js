@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from '../navbar/navbar';
 import AppMain from '../app-main/app-main';
@@ -9,7 +9,7 @@ import Loader from '../loader/loader';
 
 const App = () => {
     const { auth } = useContext(Context);
-    const [user, loading] = useAuthState(auth);
+    const [loading] = useAuthState(auth);
 
     if (loading) {
         return <Loader />

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/App-Messager/static/css/main.c82bd215.css",
+    "main.js": "/App-Messager/static/js/main.ce1fa36a.js",
+    "index.html": "/App-Messager/index.html",
+    "static/media/notepad.svg": "/App-Messager/static/media/notepad.85072e797a2ee4440244903794c347d5.svg",
+    "static/media/contacts.svg": "/App-Messager/static/media/contacts.dcdecf802036e7347af38007664311ed.svg",
+    "static/media/back.svg": "/App-Messager/static/media/back.f837749e02d558d486ae2cd9d0e2b2c1.svg",
+    "main.c82bd215.css.map": "/App-Messager/static/css/main.c82bd215.css.map",
+    "main.ce1fa36a.js.map": "/App-Messager/static/js/main.ce1fa36a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c82bd215.css",
+    "static/js/main.ce1fa36a.js"
+  ]
+}

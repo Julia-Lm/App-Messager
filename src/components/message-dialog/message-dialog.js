@@ -1,14 +1,10 @@
-import React, { useContext, useEffect } from "react";
-import { Context } from '../../index';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React, { useEffect } from "react";
 import noUserPhoto from '../../resources/userphoto.png';
 import dialogAbsent from '../../resources/notepad.svg';
 
 import './message-dialog.scss';
 
 const MessageDialog = (props) => {
-    const { auth } = useContext(Context);
-    const [user] = useAuthState(auth);
 
     let idIndex = 1;
 
@@ -27,7 +23,7 @@ const MessageDialog = (props) => {
     }
 
     return (
-        <>
+        <React.Fragment>
             {
                 props.messages.length > 0 && props.messages.findIndex(elem => elem.partner === props.contactId) >= 0 ?
                     props.messages.map(message =>
@@ -52,7 +48,7 @@ const MessageDialog = (props) => {
                     </div>
 
             }
-        </>
+        </React.Fragment>
     )
 }
 

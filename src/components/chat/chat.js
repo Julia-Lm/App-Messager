@@ -1,6 +1,5 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from '../../index';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 import Loader from '../loader/loader';
@@ -13,8 +12,7 @@ import EnterMessage from '../enter-message/enter-message';
 import './chat.scss';
 
 const Chat = () => {
-    const { auth, firestore } = useContext(Context);
-    const [user] = useAuthState(auth);
+    const { firestore } = useContext(Context);
     const [messages, loading] = useCollectionData(
         firestore.collection('messages').orderBy('createAt')
     );

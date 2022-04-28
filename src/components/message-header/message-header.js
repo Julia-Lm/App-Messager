@@ -12,7 +12,7 @@ const MessageHeader = (props) => {
     }
 
     return (
-        <>
+        <React.Fragment>
             <div className="back-icon" style={{ backgroundImage: `url(${backIcon})` }} onClick={onChangeClass}></div>
             <div className="user-icon">
                 {
@@ -26,7 +26,7 @@ const MessageHeader = (props) => {
             <div className="user-name">
                 {props.contactName !== '' ? props.contactName : ''}
             </div>
-        </>
+        </React.Fragment>
     )
 }
 

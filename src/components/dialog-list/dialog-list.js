@@ -1,14 +1,10 @@
-import React, { useContext } from "react";
-import { Context } from '../../index';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import React from "react";
 
 import noUserPhoto from '../../resources/userphoto.png';
 
 import './dialog-list.scss';
 
 const DialogList = (props) => {
-    const { auth } = useContext(Context);
-    const [user] = useAuthState(auth);
 
     const searchFilter = (users, value) => {
         return users.filter(elem => {
@@ -50,24 +46,24 @@ const DialogList = (props) => {
     }
 
     return (
-        <>
+        <React.Fragment>
             {
                 props.searchDialog === '' ?
-                    <>
+                    <React.Fragment >
                         {
                             props.activeContactList ?
                                 renderContact(props.users)
                                 :
                                 renderDialog(props.dialog)
                         }
-                    </>
+                    </React.Fragment>
 
                     :
-                    <>
+                    <React.Fragment >
                         {renderContact(searchFilter(props.users, props.searchDialog))}
-                    </>
+                    </React.Fragment>
             }
-        </>
+        </React.Fragment>
     )
 }
 

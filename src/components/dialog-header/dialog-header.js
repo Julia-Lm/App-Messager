@@ -13,7 +13,7 @@ const DialogHeader = (props) => {
 
 
     return (
-        <>
+        <React.Fragment>
             <div className="user-info">
                 <div className="user-img" style={{ backgroundImage: `url(${user.photoURL ? user.photoURL : noUserPhoto})` }}></div>
                 <div className="user-name">{user.displayName}</div>
@@ -35,7 +35,7 @@ const DialogHeader = (props) => {
                     </svg>
                 </button>
             </div>
-        </>
+        </React.Fragment>
     )
 }
 
