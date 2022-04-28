@@ -41,6 +41,7 @@
 
         .contact-time-message{
         color: gray;
+        flex: 3 1;
 
         @include _540-767{
             text-align: end;
@@ -50,6 +51,7 @@
             display: none;
         }
         .counter-message{
+            flex: 1 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -58,7 +60,7 @@
             border-radius: 50%;
             min-width: 15px;
             min-height: 15px;
-            padding: 2px;
+            padding: 0 2px;
             color: #fff;
         }
 

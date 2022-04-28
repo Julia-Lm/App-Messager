@@ -22,6 +22,7 @@ const MessageDialog = (props) => {
         messageList.scrollTop = maxScrollTop > 0 ? maxScrollTop : 0;
     }
 
+
     return (
         <React.Fragment>
             {

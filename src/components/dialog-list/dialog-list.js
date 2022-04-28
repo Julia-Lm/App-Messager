@@ -16,7 +16,7 @@ const DialogList = (props) => {
 
 
     function renderDialog(dialog) {
-        return dialog.map(elem =>
+        return dialog.sort(sortDialog).map(elem =>
             elem.lastMsg !== '' ?
                 <div key={elem.contactId} className="list-item" onClick={() => props.openUserDialog(elem.contactId, elem.contactIcon, elem.contactName)}>
                     <div className="contact-img" style={{ backgroundImage: `url(${elem.contactIcon ? elem.contactIcon : noUserPhoto})` }}></div>
@@ -43,6 +43,17 @@ const DialogList = (props) => {
                 </div>
             </div>
         )
+    }
+
+    function sortDialog(a, b) {
+        if (a.timeLastMsg !== null && b.timeLastMsg !== null) {
+
+            if (a.timeLastMsg.toDate() <= b.timeLastMsg.toDate()) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
     }
 
     return (

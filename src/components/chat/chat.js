@@ -13,10 +13,10 @@ import './chat.scss';
 
 const Chat = () => {
     const { firestore } = useContext(Context);
-    const [messages, loading] = useCollectionData(
+    const [messages] = useCollectionData(
         firestore.collection('messages').orderBy('createAt')
     );
-    const [dialog] = useCollectionData(
+    const [dialog, loading] = useCollectionData(
         firestore.collection('dialog')
     );
     const [users] = useCollectionData(
