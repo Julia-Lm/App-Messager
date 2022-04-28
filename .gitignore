@@ -10,8 +10,8 @@
 
 /.firebase
 /.github
-/.firebaserc
-/firebase.json
+.firebaserc
+firebase.json
 
 # misc
 .DS_Store
